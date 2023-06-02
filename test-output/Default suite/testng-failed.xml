@@ -3,13 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.GreyHr.TestCases.TestCase_001">
+      <class name="com.demogertHR.Xapth.UseingTestNG">
         <methods>
-          <include name="teardwown"/>
-          <include name="logintest"/>
-          <include name="setup"/>
+          <include name="loginpage"/>
+          <include name="closebrowser"/>
+          <include name="verifyUrl"/>
+          <include name="setupbrowser"/>
         </methods>
-      </class> <!-- com.GreyHr.TestCases.TestCase_001 -->
+      </class> <!-- com.demogertHR.Xapth.UseingTestNG -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

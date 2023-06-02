@@ -7,13 +7,13 @@ import java.util.Properties;
 public class ReadConfig {
  Properties pro;
  public void readConfig() {
-	   File src = new File("C:\\Users\\excel\\eclipse-workspace\\GreyHR-01Hybrid\\configuration\\confi.properties");
+	   File src = new File(".\\configuration\\confi.properties");
 	   try {
 		FileInputStream fis = new FileInputStream(src);
 		pro = new Properties();
 		pro.load(fis);
 	} catch (Exception e) {
-		System.err.println("exception is"+e.getMessage());
+		System.out.println("exception is"+e.getMessage());
 	}}
 	   public String getApplictionurl() {
 	 String url = pro.getProperty("baseurl");
@@ -29,4 +29,13 @@ public class ReadConfig {
 		return userpwd;
 	   }
 	   
+	   public String getchromepath() {
+		   String chromepath = pro.getProperty("chromepath");
+		return chromepath;
+	   }
+	   
+	   public String getfirefoxpath() {
+		   String firefoxpath = pro.getProperty("firefoxpath");
+		return firefoxpath;
+	   }
 }

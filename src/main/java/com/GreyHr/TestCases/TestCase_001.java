@@ -6,15 +6,9 @@ import org.testng.annotations.Test;
 
 import com.GreyHR_PageObjects.LoginPage;
 
-
-
-
-
-public class TestCase_001 extends BaseClass
-{
+public class TestCase_001 extends BaseClass{
 @Test
 public void logintest() throws InterruptedException {
-	driver.get(baseurl);
 	
 	//logger2.info("urol is open");
 	LoginPage lg=new LoginPage(driver);

@@ -7,15 +7,17 @@ import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage {
 WebDriver ldriver; 
- public LoginPage(WebDriver rdriver){
+ public LoginPage(WebDriver rdriver) throws InterruptedException{
+	 Thread.sleep(5000);
 	ldriver = rdriver;
 	PageFactory.initElements(rdriver, this);
 	}
-	@FindBy(xpath = "//input[@id='username' or @name='username']")
+	@FindBy(xpath ="//input[@placeholder='Employee No']\"")
 	WebElement userEId;
-	@FindBy(xpath="//*[contains(@id,'password')]")
+	
+	@FindBy(xpath="//input[@placeholder='Password']")
 	WebElement userPwd;
-	@FindBy(xpath = "//button[text( )=' Log in '] ")
+	@FindBy(xpath = "//button[@type='submit']")
 	WebElement login;
 	public void setemailid(String eid) throws InterruptedException {
 		userEId.sendKeys(eid);
